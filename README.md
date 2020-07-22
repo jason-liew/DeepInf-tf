@@ -5,3 +5,9 @@
 - july 20 查 tf pretrained embeding , 发现 buildin attention layers.
 - july 22 tf 自带的 attention layer 貌似和 DeepInf 里的 gat layer 不一致，自定义一个 keras layer
 一些pytorch里的function 在 tf 里面没有对应的,比如 masked_fill_ ，还有的是同样功能但是换了名字，比如 squeeze 在tf 里也有同名的。但是 unsqueeze 在tf 里确实 expand_dims()!
+- july 23 01:17
+tf.broadcast_to 不支持 shape 为(None,2,50),set  input layer batch size 
+tf.keras.layers.Softmax() 做最后output 总报错 softmax object  no op attribute,换成 tf.nn.softmax
+tf.keras.layers.Permute() index 从 1 开始，估计 0是 batch size 不能改顺序
+多input 时 layer name 必填 和 fit() 中要一致
+tf.nn 等function 不要放init 里然后 call 里self. 用，直接call 里调用
