@@ -11,3 +11,13 @@ tf.keras.layers.Softmax() 做最后output 总报错 softmax object  no op attrib
 tf.keras.layers.Permute() index 从 1 开始，估计 0是 batch size 不能改顺序
 多input 时 layer name 必填 和 fit() 中要一致
 tf.nn 等function 不要放init 里然后 call 里self. 用，直接call 里调用
+- july 24 01:38 <br>
+add more gat layers  <br>
+fix shape <br>
+pytorch nllloss maybe == tf SparseCategoricalCrossentropy <br>
+finaly i see this line. <br>
+WARNING:tensorflow:Gradients do not exist for variables ['Variable:0', 'Variable:0', 'Variable:0'] when minimizing the loss.
+  465/24349 [..............................] - ETA: 12:59 - loss: 0.5603
+  <br>
+ todo: WARNING ? add pretrained embedding.  metrics, evaluate, predit. tensorboard.
+
